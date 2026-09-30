@@ -2,8 +2,7 @@ import io
 import joblib
 import pandas as pd
 import streamlit as st
-# Check exact training feature names
-print(model.feature_names_in_)
+
 st.set_page_config(
     page_title="Credit Card Fraud Detection",
     page_icon="🚨",
