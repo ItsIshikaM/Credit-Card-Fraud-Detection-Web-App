@@ -148,6 +148,9 @@ if active_data is not None:
             use_container_width=True
         )
 
+    # Check exact training feature names
+print(model.feature_names_in_)
+
     except Exception as e:
         st.error(f"Inference error: {e}")
         st.info("Ensure the dataset columns and order match the model's training schema.")
