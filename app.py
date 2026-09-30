@@ -2,7 +2,8 @@ import io
 import joblib
 import pandas as pd
 import streamlit as st
-
+# Check exact training feature names
+print(model.feature_names_in_)
 st.set_page_config(
     page_title="Credit Card Fraud Detection",
     page_icon="🚨",
@@ -147,9 +148,6 @@ if active_data is not None:
             active_data.style.apply(highlight_fraud, axis=1),
             use_container_width=True
         )
-
-    # Check exact training feature names
-print(model.feature_names_in_)
 
     except Exception as e:
         st.error(f"Inference error: {e}")
